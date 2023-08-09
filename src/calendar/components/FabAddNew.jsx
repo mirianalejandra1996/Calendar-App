@@ -10,7 +10,6 @@ export const FabAddNew = () => {
 
     const handleClickNew = () => {
 
-        console.log('mira', user)      
         setActiveEvent({
             title: '',
             notes: '',

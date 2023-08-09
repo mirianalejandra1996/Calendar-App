@@ -18,7 +18,7 @@ export const AppRouter = () => {
 
     useEffect(() => {
       checkAuthToken()
-    }, [checkAuthToken])
+    }, [])
 
     if (status === 'checking') {
         return <LoadingPage/>
