@@ -4,6 +4,10 @@ import { CalendarPage } from "../calendar"
 import { useAuthStore } from "../hooks"
 import { useEffect } from "react"
 
+import { LoadingPage } from "../shared"
+
+
+
 
 
 export const AppRouter = () => {
@@ -17,8 +21,10 @@ export const AppRouter = () => {
     }, [])
 
     if (status === 'checking') {
-      return <div>Loading...</div>
+      // if (true) {
+        return <LoadingPage/>
     }
+    
 
   return (
     <Routes>

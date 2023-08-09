@@ -10,7 +10,7 @@ export const Navbar = () => {
   }
   return (
     <div className='navbar navbar-dark bg-dark mb-4 px-4'>
-        <span className='navbar-brand'>
+        <span className='navbar-brand capitalize'>
             <i className='fas fa-calendar-alt'></i>
             &nbsp;
             &nbsp;

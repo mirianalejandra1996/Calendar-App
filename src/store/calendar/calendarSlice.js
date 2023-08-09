@@ -32,10 +32,13 @@ export const calendarSlice = createSlice({
     onAddNewEvent: (state, {payload}) => {
       state.events.push(payload)
       state.activeEvent = null
+      state.isSaving = false
     },
     onUpdateEvent: (state, {payload}) => {
       state.events = state.events.map(calendarEvent => calendarEvent.id === payload.id ? payload : calendarEvent)
       state.activeEvent = null
+      state.isSaving = false
+
     },
     onDeleteEvent: (state) => {
       state.events = state.events.filter(calendarEvent => calendarEvent.id !== state.activeEvent.id)
