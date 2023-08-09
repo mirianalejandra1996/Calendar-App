@@ -1,4 +1,5 @@
-# Calendar App
+<!-- # Calendar App :calendar: -->
+# Calendar App :calendar:
 
 Este es un proyecto simple de un calendario implementado utilizando React y Redux Toolkit. El objetivo principal de este proyecto es aprender y practicar el uso de estados globales, hooks personalizados, integración de API con axios, y la administración del estado con Redux Toolkit en una aplicación de React. Esta aplicación se integra con un backend que fue programado utilizando Node js, Express y MongoDB que se encuentra en otro repositorio [Link del repositorio del Backend Caledar App](https://github.com/mirianalejandra1996/Calendar-backend).
 
@@ -66,11 +67,10 @@ Si te gustaría contribuir a este proyecto y mejorar aún más la aplicación de
 
 ## Autor
 
-
-Nombre: [Mirian Alejandra Arévalo 🙋](https://github.com/mirianalejandra1996).
-Correo Electrónico: [mirianalejandra1996@gmail.com](mailto:mirianalejandra1996@gmail.com).
-GitHub: [https://github.com/mirianalejandra1996](https://github.com/mirianalejandra1996).
-Linkedin: [https://www.linkedin.com/in/mirian-arevalo/](https://www.linkedin.com/in/mirian-arevalo/).
+- Nombre: [Mirian Alejandra Arévalo 🙋](https://github.com/mirianalejandra1996).
+- Correo Electrónico: [mirianalejandra1996@gmail.com](mailto:mirianalejandra1996@gmail.com).
+- GitHub: [https://github.com/mirianalejandra1996](https://github.com/mirianalejandra1996).
+- Linkedin: [https://www.linkedin.com/in/mirian-arevalo/](https://www.linkedin.com/in/mirian-arevalo/).
 
 
 
@@ -117,4 +117,3 @@ Este proyecto ha sido inspirado en el curso de Fernando Herrera de React js.
 ## Inspiración
 
 Este proyecto ha sido inspirado en el curso de Fernando Herrera de React js.
-
