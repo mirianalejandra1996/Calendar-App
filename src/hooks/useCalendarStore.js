@@ -23,6 +23,7 @@ export const useCalendarStore = () => {
 
   // No vamos a usar un thunks asíncronos, de frente vamos a disparar acciones síncronas
   const startSavingEvent = async (calendarEvent) => {
+    console.log('startSavingEvent', calendarEvent)
 
     try {
       if (calendarEvent.id) {
@@ -31,9 +32,13 @@ export const useCalendarStore = () => {
         dispatch(onUpdateEvent({ ...calendarEvent }));
         return;
       } else {
-        // Else is creating a new event
+        // Else is creating a new event and adding an unique ID event
         const { data } = await calendarApi.post("/events", calendarEvent);
-        dispatch(onAddNewEvent({ ...calendarEvent, id: data.event.id, ...user, _id: user.uid }));
+
+        console.log('is creating a new event RESPONSE', data)
+        // console.log('is creating a new event', { ...calendarEvent, id: data.event.id, user: { ...user, _id: user.uid} })
+        // dispatch(onAddNewEvent({ ...calendarEvent, id: data.event.id, user: { ...user, _id: user.uid} }));
+        dispatch(onAddNewEvent({ ...calendarEvent, id: data.event.id, user: { ...user, _id: user.uid} }));
       }
     } catch (error) {
       console.log('error', error)

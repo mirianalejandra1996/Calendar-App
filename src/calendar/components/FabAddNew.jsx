@@ -1,22 +1,26 @@
 import { addHours } from "date-fns"
-import { useUiStore, useCalendarStore } from "../../hooks"
+import { useUiStore, useCalendarStore, useAuthStore } from "../../hooks"
 
 export const FabAddNew = () => {
 
     const { openDateModal } = useUiStore()
     const { setActiveEvent } = useCalendarStore()
+    const { user } = useAuthStore()
+    
 
     const handleClickNew = () => {
+
+        console.log('mira', user)      
         setActiveEvent({
             title: '',
-            note: '',
+            notes: '',
             start: new Date(),
             end: addHours(new Date(), 1),
             bgColor: '#fafafa',
-            user: {
-                _id: 123,
-                name: 'Ale',
-            }
+            // user: {
+            //     _id: 123,
+            //     name: 'Ale',
+            // }
           })
         openDateModal()
       }

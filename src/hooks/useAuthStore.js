@@ -7,6 +7,7 @@ export const useAuthStore = () => {
   const dispatch = useDispatch();
 
   const startLogin = async ({email, password}) => {
+        
         dispatch(onChecking())
         try {
             const { data } = await calendarApi.post('/auth', { email, password})
@@ -56,6 +57,8 @@ export const useAuthStore = () => {
     try {
 
         const { data } = await calendarApi.get('/auth/renew')
+
+        console.log('===checkAuthToken data', data)
 
         // * Note: I can create a functionality to set cookies for code optimization
         localStorage.setItem('token', data.token)
