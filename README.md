@@ -1,7 +1,7 @@
 <!-- # Calendar App :calendar: -->
 # Calendar App :calendar:
 
-Este es un proyecto simple de un calendario implementado utilizando React y Redux Toolkit. El objetivo principal de este proyecto es aprender y practicar el uso de estados globales, hooks personalizados, integración de API con axios, y la administración del estado con Redux Toolkit en una aplicación de React. Esta aplicación se integra con un backend que fue programado utilizando Node js, Express y MongoDB que se encuentra en otro repositorio [Link del repositorio del Backend Caledar App](https://github.com/mirianalejandra1996/Calendar-backend).
+Este es un proyecto simple de un calendario implementado utilizando React y Redux Toolkit. El objetivo principal de este proyecto es aprender y practicar el uso de estados globales, hooks personalizados, integración de API con axios, y la administración del estado con Redux Toolkit en una aplicación de React. Esta aplicación se integra con un backend que fue programado utilizando Node js, Express y MongoDB que se encuentra en otro repositorio [Link del repositorio del Backend Calendar App](https://github.com/mirianalejandra1996/Calendar-backend).
 
 ### Características
 
