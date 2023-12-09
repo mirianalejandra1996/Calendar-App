@@ -29,12 +29,14 @@ export const useCalendarStore = () => {
         // If user has an ID is because the event needs to be updated
         await calendarApi.put(`/events/${calendarEvent.id}`, calendarEvent);
         dispatch(onUpdateEvent({ ...calendarEvent }));
+        Swal.fire('Update', "It has been updated successfully", 'success');
         return;
       } else {
         // Else is creating a new event and adding an unique ID event
         const { data } = await calendarApi.post("/events", calendarEvent);
-
         dispatch(onAddNewEvent({ ...calendarEvent, id: data.event.id, user: { ...user, _id: user.uid} }));
+        Swal.fire('Creation', "It has been created successfully", 'success');
+      
       }
     } catch (error) {
       console.log('error', error)
@@ -42,12 +44,12 @@ export const useCalendarStore = () => {
     }
   };
 
-  const startDeletingEvent = async (calendarEvent) => {
+  const startDeletingEvent = async () => {
 
     try {
-
-      await calendarApi.delete(`/events/${calendarEvent.id}`);
+      await calendarApi.delete(`/events/${ activeEvent.id }` );
       dispatch(onDeleteEvent());
+      Swal.fire('Elimination', "It has been removed successfully", 'success');
       return;
       
     } catch (error) {
@@ -61,6 +63,7 @@ export const useCalendarStore = () => {
     try {
       const { data } = await calendarApi.get("/events");
 
+      console.log('loading events', data)
       const events = convertEventsToDateEvents(data.events);
 
       dispatch(onLoadEvents(events));

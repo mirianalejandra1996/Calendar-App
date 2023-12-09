@@ -1,0 +1,44 @@
+import { render, screen } from "@testing-library/react"
+import { FabDelete } from "../../../src/calendar/components/FabDelete"
+import { configureStore } from "@reduxjs/toolkit"
+import { Provider } from "react-redux"
+// import { authSlice, calendarSlice, store } from "../../../src/store"
+import { calendarSlice } from "../../../src/store"
+import { calendarWithActiveEventsState } from "../../fixtures/calendarFixtures"
+
+// ! IR AL COMPONENTE FABDELETE! DEJÉ UNA NOTA IMPORTANTE EXPLICANDO POR QUÉ NO HICE ESTE TEST FINALMENTE.
+jest.mock('react-redux', () => ({
+    ...jest.requireActual('react-redux'),
+    // useDispatch: () => (fn) => fn(), /** Va a recibir una función y se manda a llamar esa función - simula el verdadero dispatch */
+    useSelector: () => (fn) => fn(), /** Va a recibir una función y se manda a llamar esa función - simula el verdadero dispatch */
+}))
+
+const store = configureStore({
+    reducer: {
+        // auth: authSlice.reducer,
+        calendar: calendarSlice.reducer,
+    },
+    preloadedState: {
+        // auth: notAuthenticatedState
+        calendar: calendarWithActiveEventsState,
+    }
+})
+
+// const { events, activeEvent } = useSelector( state => state.calendar );
+
+
+describe('Tests on <FabDelete />', () => {
+
+    test('should first', () => {
+        
+        render(
+            <Provider store={store}>
+                <FabDelete/>
+            </Provider>
+        )
+
+        console.log(store.getState())
+
+        screen.debug()
+     })
+})

@@ -5,8 +5,9 @@ export const FabDelete = () => {
     const { startDeletingEvent, activeEvent, hasEventSelected } = useCalendarStore()
     const { isDateModalOpen } = useUiStore()
     const { user } = useAuthStore()
-    const isMyEvent = user?.uid === activeEvent?.user?._id
 
+    const isMyEvent = user?.uid === activeEvent?.user?._id
+    
     const handleDelete = () => {
 
         if(!activeEvent) return
@@ -20,6 +21,7 @@ export const FabDelete = () => {
       isMyEvent
       ? (
         <button
+        aria-label="btn-delete"
         onClick={handleDelete}
         className='btn btn-danger fab-danger'
         style={{display: (hasEventSelected && !isDateModalOpen ) ? '' : 'none'}}

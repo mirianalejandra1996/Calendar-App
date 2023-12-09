@@ -11,6 +11,7 @@ import Modal from "react-modal";
 import { differenceInSeconds } from "date-fns/esm";
 
 import { useAuthStore, useCalendarStore, useUiStore } from "../../hooks";
+import { getEnvVariables } from "../../helpers";
 
 registerLocale("es", es);
 
@@ -32,7 +33,11 @@ const customStyles = {
   },
 };
 
-Modal.setAppElement("#root");
+// Modal.setAppElement("#root");
+
+if (getEnvVariables().VITE_MODE !== 'test') {
+  Modal.setAppElement('#root');
+}
 
 export const CalendarModal = () => {
   const { isDateModalOpen, closeDateModal } = useUiStore();

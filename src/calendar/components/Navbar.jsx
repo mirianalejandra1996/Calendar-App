@@ -1,5 +1,5 @@
 import React from 'react'
-import { useAuthStore, useCalendarStore } from '../../hooks'
+import { useAuthStore } from '../../hooks'
 
 export const Navbar = () => {
 
@@ -17,7 +17,7 @@ export const Navbar = () => {
             {user.name}
         </span>
 
-        <button onClick={handleLogout} className='btn btn-outline-danger'>
+        <button aria-label='logout-btn' onClick={handleLogout} className='btn btn-outline-danger'>
             <i className='fa fa-sign-out-alt'></i>
             &nbsp;
             <span>Salir</span>

@@ -1,12 +1,10 @@
 import { addHours } from "date-fns"
-import { useUiStore, useCalendarStore, useAuthStore } from "../../hooks"
+import { useUiStore, useCalendarStore } from "../../hooks"
 
 export const FabAddNew = () => {
 
     const { openDateModal } = useUiStore()
     const { setActiveEvent } = useCalendarStore()
-    const { user } = useAuthStore()
-    
 
     const handleClickNew = () => {
 

@@ -8,13 +8,15 @@ export const useAuthStore = () => {
 
   const startLogin = async ({email, password}) => {
         
+    console.log({email, password})
         dispatch(onChecking())
         try {
-            const { data } = await calendarApi.post('/auth', { email, password})
+            const { data } = await calendarApi.post('/auth', { email, password })
             localStorage.setItem('token', data.token)
             localStorage.setItem('token-init-date', new Date().getTime()) // In case we would like to do something
             dispatch(onLogin({name: data.name, uid: data.uid}))
         } catch (error) {
+            console.log('error', error.message)
             localStorage.removeItem('token')
             localStorage.removeItem('token-init-date')
             dispatch(onLogout('Invalid credentials'))

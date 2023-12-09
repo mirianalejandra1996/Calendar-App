@@ -14,7 +14,7 @@ export const AppRouter = () => {
 
   const { status, checkAuthToken} = useAuthStore()
 
-  console.log('env', process.env.NODE_ENV)
+  // console.log('env', process.env.NODE_ENV)
 
     useEffect(() => {
       checkAuthToken()

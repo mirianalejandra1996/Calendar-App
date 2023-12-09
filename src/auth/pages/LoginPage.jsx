@@ -71,10 +71,11 @@ export const LoginPage = () => {
             <div className="row">
                 <div className="col-md-6 login-form-1">
                     <h3>Log In</h3>
-                    <form onSubmit={handleLoginSubmit}>
+                    <form aria-label='login-form' onSubmit={handleLoginSubmit}>
                         <div className="form-group mb-2">
                             <input 
                                 type="text"
+                                aria-label='loginEmail'
                                 value={loginEmail}
                                 className="form-control"
                                 placeholder="Email"
@@ -85,6 +86,7 @@ export const LoginPage = () => {
                         <div className="form-group mb-2">
                             <input
                                 type="password"
+                                aria-label='loginPassword'
                                 value={loginPassword}
                                 className="form-control"
                                 placeholder="Password"
@@ -105,10 +107,11 @@ export const LoginPage = () => {
 
                 <div className="col-md-6 login-form-2">
                     <h3>Sign Up</h3>
-                    <form onSubmit={handleRegisterSubmit}>
+                    <form aria-label='register-form' onSubmit={handleRegisterSubmit}>
                         <div className="form-group mb-2">
                             <input
                                 type="text"
+                                aria-label='registerName'
                                 value={registerName}
                                 className="form-control"
                                 placeholder="Name"
@@ -119,6 +122,7 @@ export const LoginPage = () => {
                         <div className="form-group mb-2">
                             <input
                                 type="email"
+                                aria-label='registerEmail'
                                 value={registerEmail}
                                 className="form-control"
                                 placeholder="Email"
@@ -129,6 +133,7 @@ export const LoginPage = () => {
                         <div className="form-group mb-2">
                             <input
                                 type="password"
+                                aria-label='registerPassword'
                                 value={registerPassword}
                                 className="form-control"
                                 placeholder="Contraseña" 
@@ -140,6 +145,7 @@ export const LoginPage = () => {
                         <div className="form-group mb-2">
                             <input
                                 type="password"
+                                aria-label='registerPassword2'
                                 value={registerPassword2}
                                 className="form-control"
                                 placeholder="Repeat Password" 
