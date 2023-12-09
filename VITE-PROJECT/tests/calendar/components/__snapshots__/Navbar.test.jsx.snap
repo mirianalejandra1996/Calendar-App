@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests on <Navbar/> should display the component correctly if user is logged in 1`] = `
+<div>
+  <div
+    class="navbar navbar-dark bg-dark mb-4 px-4"
+  >
+    <span
+      class="navbar-brand capitalize"
+    >
+      <i
+        class="fas fa-calendar-alt"
+      />
+         
+      alejandra
+    </span>
+    <button
+      aria-label="logout-btn"
+      class="btn btn-outline-danger"
+    >
+      <i
+        class="fa fa-sign-out-alt"
+      />
+       
+      <span>
+        Salir
+      </span>
+    </button>
+  </div>
+</div>
+`;

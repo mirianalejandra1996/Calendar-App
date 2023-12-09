@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests on <AppRouter /> should display login screen if user is not logged in 1`] = `
+<div>
+  <div
+    class="container login-container"
+  >
+    <div
+      class="row"
+    >
+      <div
+        class="col-md-6 login-form-1"
+      >
+        <h3>
+          Log In
+        </h3>
+        <form
+          aria-label="login-form"
+        >
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              aria-label="loginEmail"
+              class="form-control"
+              name="loginEmail"
+              placeholder="Email"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              aria-label="loginPassword"
+              class="form-control"
+              name="loginPassword"
+              placeholder="Password"
+              type="password"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              class="btnSubmit"
+              type="submit"
+              value="Login"
+            />
+          </div>
+        </form>
+      </div>
+      <div
+        class="col-md-6 login-form-2"
+      >
+        <h3>
+          Sign Up
+        </h3>
+        <form
+          aria-label="register-form"
+        >
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              aria-label="registerName"
+              class="form-control"
+              name="registerName"
+              placeholder="Name"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              aria-label="registerEmail"
+              class="form-control"
+              name="registerEmail"
+              placeholder="Email"
+              type="email"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              aria-label="registerPassword"
+              class="form-control"
+              name="registerPassword"
+              placeholder="Contraseña"
+              type="password"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              aria-label="registerPassword2"
+              class="form-control"
+              name="registerPassword2"
+              placeholder="Repeat Password"
+              type="password"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              class="btnSubmit"
+              type="submit"
+              value="Crear cuenta"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;
